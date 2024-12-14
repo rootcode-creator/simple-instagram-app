@@ -40,9 +40,7 @@ let posts = [
     }
 ];
 
-app.get("/", (req, res) => {
-    res.redirect("/posts");
-});
+
 app.get("/posts", (req, res) => {
     res.render("index.ejs", {posts});
 });
@@ -105,6 +103,10 @@ app.delete("/posts/delete/:id", (req, res) => {
     res.redirect("/posts");
     
 
+});
+
+app.get("/", (req, res) => {
+    res.redirect("/posts");
 });
 
 app.listen(port, () => {
