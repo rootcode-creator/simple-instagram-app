@@ -1,10 +1,37 @@
-# simple-instagram-app
+<p align="center">
+  <img src="instagram.png" alt="Instagram logo" width="120" />
+</p>
+
+<h1 align="center">simple-instagram-app</h1>
+
+<p align="center"><i>A simple Instagram-inspired app for sharing posts with CRUD actions.</i></p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js badge" />
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express badge" />
+  <img src="https://img.shields.io/badge/EJS-B4CA0A?style=for-the-badge&logo=ejs&logoColor=white" alt="EJS badge" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript badge" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 badge" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 badge" />
+</p>
 
 ## 🚀 Project intro
 
 simple-instagram-app is a small Instagram-inspired web application built with Node.js, Express, and EJS. It provides a simple CRUD experience for posts, allowing users to view posts, create new ones, see detailed information, edit existing content, and delete posts.
 
 The app uses in-memory data storage, so posts are available while the server is running and reset when the server restarts.
+
+## Table of Contents
+
+- [🚀 Project intro](#-project-intro)
+- [📁 Project structure](#-project-structure)
+- [⭐ Differentiators](#-differentiators)
+- [🔧 Features](#-features)
+- [🧰 Tech stack](#-tech-stack)
+- [⚙️ Installation and setup](#️-installation-and-setup)
+- [🛣️ Routes](#️-routes)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ## 📁 Project structure
 
@@ -30,22 +57,49 @@ simple-instagram-app/
 - public/style.css: stylesheet for the UI
 - images/: folder used for static image files referenced by posts
 
+## ⭐ Differentiators
+
+- Lightweight and beginner-friendly CRUD demo
+- Simple Express-based routing with EJS views
+- In-memory storage makes the app easy to run locally
+- Clean, minimal UI inspired by Instagram-style social feeds
+
 ## 🔧 Features
 
-- View a list of posts on the home page
-- Create a new post with username, image, name, age, and content
-- View the full details of a post
-- Edit an existing post
-- Delete a post
-- Use simple REST-style routes with Express
+### Core features
+
+| Feature | Status | Notes |
+| --- | --- | --- |
+| Browse posts | ✅ Current | View a list of posts on the home page |
+| Create post | ✅ Current | Add username, image, name, age, and content |
+| View details | ✅ Current | Open the full details for any post |
+| Edit post | ✅ Current | Update existing post content and metadata |
+| Delete post | ✅ Current | Remove posts from the in-memory list |
+| REST-style routing | ✅ Current | Built with Express routes and method override |
+
+### App flow
+
+```mermaid
+flowchart TD
+    A[Visitor] --> B[Home page]
+    B --> C{Choose action}
+    C -->|Create| D[Open create form]
+    D --> E[Save new post]
+    E --> B
+    C -->|Details| F[Open post details]
+    F --> G[Edit or delete post]
+    G --> B
+```
 
 ## 🧰 Tech stack
 
-- Node.js
-- Express
-- EJS
-- method-override
-- uuid
+- **Runtime:** Node.js
+- **Server framework:** Express
+- **Template engine:** EJS
+- **Frontend:** HTML, CSS, JavaScript
+- **Request handling:** method-override
+- **ID generation:** uuid
+- **Storage:** In-memory data store
 
 ## ⚙️ Installation and setup
 
